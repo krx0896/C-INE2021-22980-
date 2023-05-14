@@ -1,0 +1,128 @@
+9.
+  string answer;
+
+	// 사용자로부터 답안을 받아 변수에 값을 받습니다.
+  getline(cin , answer);
+
+12. 
+  max = (a > b) ? a : b;
+	// 최댓값 변수와 남은 한 변수를 비교합니다.
+	// 둘 중 큰 값을 최댓값 변수에 저장합니다.
+  max = (max > c) ? max : c;
+
+15.
+score /= 10;  // score = score / 10; 이랑 같은뜻
+ 
+ switch(score){
+    case 10: 
+    case 9: 
+      cout << 'A';
+      break;
+    case 8: 
+      cout << 'B';
+      break;
+    case 7: 
+      cout << 'C';
+      break;
+    case 6: 
+      cout << 'D';
+      break;
+    default:
+      cout << 'F';
+      break;
+  }
+
+16. 
+	// 최대값을 저장할 변수 선언
+	// 3개의 숫자 중 최대 값을 찾아 최대값 변수에 저장
+	// 힌트: 두 개씩 비교해봅시다.
+  int maxScore;
+  if(score1 > score2){
+    maxScore = score1;
+  }
+  else {
+    maxScore = score2;
+  }
+  if(score3 > maxScore){
+    maxScore = score3;
+  }
+
+19.
+	for (int i = 1; i < lastday + 1; i++){
+      cout<< setw(3) << i << " ";
+      space++;
+      if(space > 6){
+         cout << endl;
+         space = 0;
+         }
+  }
+
+20.
+// 수학함수를 사용하기 위한 해더파일 포함시키기
+#include <cmath>
+
+// abs 함수 사용 
+    // abs 함수에 인자로 8을 넣어서 출력
+    // abs 함수에 인자로 -8을 넣어서 출력
+    
+   cout << abs(8) << endl;  // absulute value 절댓값
+   cout << abs(-8) << endl;
+
+// floor, ceil 함수 사용
+    // floor 함수에 인자로 12.78을 넣어서 출력
+    // ceil 함수에 인자로 12.78을 넣어서 출력
+
+   cout << floor(12.78) << endl; // 내림
+   cout << ceil(12.78) << endl;  // 올림
+
+// log, log10 함수 사용
+    // log 함수에 인자로 100을 넣어서 출력
+    // log10 함수에 인자로 100을 넣어서 출력
+
+   cout << log(100) << endl; // ln 값
+   cout << log10(100) << endl; 
+  
+// exp, pow 함수 사용
+    // exp 함수의 인자로 5를 넣어서 출력
+    // pow 함수의 인자로 2와 3을 차례로 넣어서 출력
+
+   cout << exp(5) << endl; // 자연상수 e의 n 제곱값
+   cout << pow(2,3) << endl; // (n,k) n의 k제곱
+
+// sqrt 함수 사용
+    // sqrt 함수의 인자로 100을 넣어서 출력
+
+   cout << sqrt(100) << endl; // n의 루트값
+
+22.
+// 시간을 다루기 위한 헤더를 포함시킨다.
+#include <ctime>
+
+    // 경과한 초 단위 시간과 현재 초 찾기
+    // 1970년 1월 1일 0시를 기준으로 지난 초 단위의 시간을 얻어온다.
+    long ut = time(0);
+    // ut를 60으로 나눈 나머지는 현재 초를 의미한다.
+    int sec = ut % 60;
+    
+    // 경과한 분 단위 시간과 현재 분 찾기
+    // ut를 60으로 나눈 몫은 지난 시간을 분 단위로 변환한 것이다.
+    long ut60 = ut / 60;
+    // ut60을 60으로 나눈 나머지는 현재 분을 의미한다.
+    int min = ut60 % 60;
+    
+    // 경과한 시간과 시 단위 시간 찾기
+    // ut60을 60으로 나눈 몫은 지난 시간을 시 단위로 변환한 것이다.
+    long ut3600 = ut60 / 60;
+    ut3600 += 9; // ut3600 = ut3600 + 9
+
+    // 우리나라 시간으로 맞추기 위해 ut3600에 9를 더한다.
+    // ut3600을 24으로 나눈 나머지는 현재 시를 의미한다.    
+    int hour = ut3600 % 24;
+    
+    // 현재 시간을 출력을 출력한다.
+    cout << hour << " : " << min << " : " << sec << endl;
+
+23.
+// 랜덤 함수를 사용하기 위한 헤더 파일을 포함시킨다.
+#include <cstdlib>
+bool found = false; // f = 0 t = 1 bool함수는 두가지 값만 가진다
